@@ -23,7 +23,7 @@ body {
 #info {
     margin: 0;
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     left: 10vw;
     /* -ms-transform: translate(-25%, -25%);
     transform: translate(-25%, -25%); */
@@ -46,30 +46,45 @@ body {
     width: 50vh;
     border-style: solid;
     border-radius: 50%;
-    border-color: rgba(71, 64, 68, 1);
-    border-width: 6px;
+    border-color: rgba(79, 81, 101, 1);
+    border-width: 3px;
     overflow: hidden;
     background-color: rgba(79, 81, 101, 1);
+    box-shadow: 3px 3px 10px rgba(80, 216, 215, 1);
     z-index: 1;
 }
 
 .popUp {
     display: none;
     width:25vw;
-    min-width: 200px;
+    min-width: 265px;
     /* height: 150px; */
-    height: 15vh;
-    background-color: #4F5165;
+    height: 10vh;
+    /* background-color: #4F5165; */
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #474044;
+    box-shadow: 5px 5px 12px #474044;
+    color: #293132;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 6vh;
+    text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
+    /* padding: 5px; */
+}
+.popUp i {
+    padding-top: 5px;
 }
 #pricing {
     margin: 0; 
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     left: 65vw;
 }
 #title {
+    font-family: 'Archivo Black', sans-serif;
     text-align: center;
     font-size: 10vh;
+    color: #293132;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
 }
