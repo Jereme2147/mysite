@@ -1,44 +1,23 @@
 
 $(document).ready(function(){
-    let large = window.matchMedia("(min-width: 421px)");
-    let small = window.matchMedia("(max-width: 420px)");
-   /* large media */
-    if (large.matches) {
-        $('.photo-div').hover(function () {
-            // $('.popUp').show("slow");
-            $('.popUp').fadeIn(1000);
-            $('#front-photo').show();
-            // $('#title').css({'font-size' : '8vh'})
-            $("#title").animate({
-                fontSize: "8vh"
-            }, 1000);
-        }, function () {
-            $('#front-photo').hide();
-        })
-        $('.photo-div').click(function () {
-            $('.popUp').toggle();
-            $("#title").animate({
-                fontSize: "10vh"
-            }, 1000);
-        })
-    };
-    /* small media */
-    /* toggles menu and slides photo up.  */
-    if (small.matches) {
-        $('.popUp').hide();
-        $('.photo-div').click(function () {
-            $('.popUp').show();
-            $('.photo-div').animate({
-                marginTop: "0"
-            }, 500);
-            /* toggles photo for 1 second */
-            $('#back-photo').html(`<img src="surprised.png" alt="my picture" id="photo">`);
-            setTimeout(() => {
-                $('#back-photo').html(`<img src="noexpression.png" alt="my picture" id="photo">`); 
-            }, 1000);
-        });
-    };
- 
+    let x = window.matchMedia("(min-width: 421px)");
+    $('.photo-div').hover(function () {
+        // $('.popUp').show("slow");
+        $('.popUp').fadeIn(1000);
+        $('#front-photo').show();
+        // $('#title').css({'font-size' : '8vh'})
+        $("#title").animate({
+            fontSize: "8vh"
+        }, 1000);
+    }, function () {
+        $('#front-photo').hide();
+    })
+    $('.photo-div').click(function() {
+        $('.popUp').toggle();
+        $("#title").animate({
+            fontSize: "10vh"
+        }, 1000);
+    })
     //info button hover
     $('#info').mouseenter(function(){
         $('#pricing').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });
