@@ -1,8 +1,8 @@
-@media (max-width: 420px) {
-
-#contact {
+@media (min-width : 421px) and (max-width : 1024px) {
+    #contact {
     position: relative;
-  order: 3;
+    order: 3;
+    color: #EBECEC;
 }
 #content {
     display: flex;
@@ -23,6 +23,13 @@
     position: relative;
     order: 1;
 }
+#medium-screens {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
 #photo {
     width: 40vh;
 
@@ -40,6 +47,7 @@
     overflow: hidden;
     background-color: rgba(79, 81, 101, 1);
     box-shadow: 3px 3px 10px rgba(80, 216, 215, 1);
+    /* margin-top: 5vh; */
     margin-top: 15vh;
     margin-bottom: 5px;
 }
@@ -48,22 +56,17 @@
 .popUp {
     display: flex;
     justify-content: center;
-    width:25vw;
-    min-width: 265px;
-    /* height: 150px; */
-    height: 8vh;
-    /* background-color: #4F5165; */
+    width: 40vw;
+    height: 15vw;
     border-radius: 10px;
     box-shadow: 5px 5px 12px #474044;
     color: #293132;
     text-align: center;
     font-family: 'Lora', serif;
-    font-size: 5vh;
+    font-size: 8vw;
     text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
-    margin-bottom: 5px;
+    margin: 5px 0px 25px 0px;
     padding-bottom: 5px;
-    margin-top: 5px;
-    /* padding: 5px; */
 }
 .popUp i {
     padding-top: 15px;
@@ -77,10 +80,11 @@
     font-family: 'Archivo Black', sans-serif;
     text-align: center;
     /* font-size: 10vh; */
-    font-size: 65px;
+    font-size: 10vh;
     color: #293132;
     margin-bottom: 15px;
-    margin-top: 30px;
+    margin-top: 10vh;
     text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
 }
 }
+

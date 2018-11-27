@@ -1,7 +1,9 @@
 
 $(document).ready(function(){
-    let large = window.matchMedia("(min-width: 421px)");
+    let large = window.matchMedia("(min-width: 1025px)");
+    let medium = window.matchMedia("(min-width: 421px) and (max-width: 1024px)");
     let small = window.matchMedia("(max-width: 420px)");
+    console.log(medium);
    /* large media */
     if (large.matches) {
         $('.photo-div').hover(function () {
@@ -10,7 +12,8 @@ $(document).ready(function(){
             $('#front-photo').show();
             // $('#title').css({'font-size' : '8vh'})
             $("#title").animate({
-                fontSize: "8vh"
+                fontSize: "8vh",
+                marginTop: "5vh"
             }, 1000);
         }, function () {
             $('#front-photo').hide();
@@ -18,7 +21,8 @@ $(document).ready(function(){
         $('.photo-div').click(function () {
             $('.popUp').toggle();
             $("#title").animate({
-                fontSize: "10vh"
+                fontSize: "10vh",
+                marginTop: "10vh"
             }, 1000);
         })
     };
@@ -31,6 +35,9 @@ $(document).ready(function(){
             $('.photo-div').animate({
                 marginTop: "0"
             }, 500);
+            $('#title').animate({
+                marginTop: "5vh"
+            }, 500);
             /* toggles photo for 1 second */
             $('#back-photo').html(`<img src="surprised.png" alt="my picture" id="photo">`);
             setTimeout(() => {
@@ -38,6 +45,27 @@ $(document).ready(function(){
             }, 1000);
         });
     };
+    /* Medium tablets/narrow screens on the large side */
+    if (medium.matches) {
+        $('#content').html(mediumScreen);
+        $('.popUp').hide();
+        $('.photo-div').click(function () {
+            $('.photo-div').animate({
+                marginTop: "5vh"
+            }, 500);
+            $('#back-photo').html(`<img src="surprised.png" alt="my picture" id="photo">`);
+            setTimeout(() => {
+                $('#back-photo').html(`<img src="noexpression.png" alt="my picture" id="photo">`);
+            }, 1000);
+            $('.popUp').show();
+            $('#title').animate({
+                marginTop: "2vh",
+                marginBottom: "5px"
+            }, 500);
+        })
+        
+        // $('.popUp').hide();
+    }
  
     //info button hover
     $('#info').mouseenter(function(){
@@ -140,3 +168,26 @@ $(document).ready(function(){
     });
 
 });
+let mediumScreen = `<div id="menu"><!-- will show on all pages except landing -->
+        </div> 
+        <div id="back-photo" class="photo-div">
+            <img src="noexpression.png" alt="my picture" id="photo">
+        </div>
+        <!-- picture to show on hover / click -->
+        <div id="front-photo" class="photo-div">
+            <img src="surprised.png" alt="my picture" id="photo">
+        </div>
+        <div id="medium-screens"> 
+            <div id="info" class="popUp">
+                <i class="fas fa-info-circle">Info</i>
+            </div>
+            <div id="contact" class="popUp">
+                <i class="fas fa-envelope">Contact</i>
+            </div>
+            <div id="pricing" class="popUp">
+                <i class="fas fa-dollar-sign">Pricing</i>
+            </div>
+            <div id="extra" class="popUp">
+                <i class="fas fa-smile">Extra</i>
+            </div>
+        </div>`;
