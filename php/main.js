@@ -1,15 +1,42 @@
 
 $(document).ready(function(){
-    let large = window.matchMedia("(min-width: 1025px)");
+    /* after confirmation medium isn't needed, get rid of these old media queries */
+   /*  let large = window.matchMedia("(min-width: 1025px)");
     let medium = window.matchMedia("(min-width: 421px) and (max-width: 1024px)");
-    let small = window.matchMedia("(max-width: 420px)");
-    console.log(medium);
-   /* large media */
+    let small = window.matchMedia("(max-width: 420px)"); */
+    let large = window.matchMedia("(min-width: 501px)");
+    // let medium = window.matchMedia("(min-width: 421px) and (max-width: 1024px)");
+    let small = window.matchMedia("(max-width: 500px)");
+   /* large media  shows popups and animates their fade into position on page*/
     if (large.matches) {
         $('.photo-div').hover(function () {
-            // $('.popUp').show("slow");
-            $('.popUp').fadeIn(1000);
             $('#front-photo').show();
+            $('.photo-div').animate({
+                top: "40%"
+            }, 1000);
+            $('#contact').fadeIn(100);
+            $('#contact').animate({
+                left: "50vw",
+                top: "80vh"
+            },1000);
+            $('#extra').fadeIn(100);
+            $('#extra').animate({
+                left: "20vw",
+                top: "80vh"
+            }, 1000);
+            setTimeout(() => {
+                $('#pricing').fadeIn(100);
+                $('#pricing').animate({
+                    left: "50vw",
+                    top: "68vh"
+                }, 1000);
+                $('#info').fadeIn(100);
+                $('#info').animate({
+                    left: "20vw",
+                    top: "68vh"
+                }, 1000);
+            }, 400);
+
             // $('#title').css({'font-size' : '8vh'})
             $("#title").animate({
                 fontSize: "8vh",
@@ -17,13 +44,6 @@ $(document).ready(function(){
             }, 1000);
         }, function () {
             $('#front-photo').hide();
-        })
-        $('.photo-div').click(function () {
-            $('.popUp').toggle();
-            $("#title").animate({
-                fontSize: "10vh",
-                marginTop: "10vh"
-            }, 1000);
         })
     };
     /* small media */
@@ -46,7 +66,7 @@ $(document).ready(function(){
         });
     };
     /* Medium tablets/narrow screens on the large side */
-    if (medium.matches) {
+    /* if (medium.matches) {
         $('#content').html(mediumScreen);
         $('.popUp').hide();
         $('.photo-div').click(function () {
@@ -64,11 +84,10 @@ $(document).ready(function(){
             }, 500);
         })
         
-        // $('.popUp').hide();
-    }
+    } */
  
     //info button hover
-    $('#info').mouseenter(function(){
+   /*  $('#info').mouseenter(function(){
         $('#pricing').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });
         setTimeout(() => {
             $('#pricing').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
@@ -91,9 +110,9 @@ $(document).ready(function(){
         setTimeout(() => {
             $('#info').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
         }, 700);
-    });
+    }); */
     //pricing button hover 
-    $('#pricing').mouseenter(function () {
+    /* $('#pricing').mouseenter(function () {
         $('#contact').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
         setTimeout(() => {
             $('#contact').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
@@ -116,9 +135,9 @@ $(document).ready(function(){
         setTimeout(() => {
             $('#pricing').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
         }, 700);
-    });
+    }); */
     //contact button hover 
-    $('#contact').mouseenter(function () {
+    /* $('#contact').mouseenter(function () {
         $('#extra').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
         setTimeout(() => {
             $('#extra').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
@@ -141,8 +160,8 @@ $(document).ready(function(){
         setTimeout(() => {
             $('#contact').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
         }, 700);
-    });
-    $('#extra').mouseenter(function () {
+    }); */
+   /*  $('#extra').mouseenter(function () {
         $('#info').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
         setTimeout(() => {
             $('#info').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
@@ -165,10 +184,11 @@ $(document).ready(function(){
         setTimeout(() => {
             $('#extra').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
         }, 700);
-    });
+    }); */
 
 });
-let mediumScreen = `
+/* almost positive I don't need this at all.  Once I've confirmed, it will be deleted. */
+/* let mediumScreen = `
         <div id="menu"><!-- will show on all pages except landing -->
         </div> 
         <div id="back-photo" class="photo-div">
@@ -199,4 +219,4 @@ let mediumScreen = `
                     <i class="fas fa-smile">Extra</i>
                 </div>
             </a>
-        </div>`;
+        </div>`; */
