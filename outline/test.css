@@ -1,0 +1,31 @@
+#contents {
+    display: flex;
+    background-color: #547AA5;
+    width: 60vw;
+    height: 100vh;
+}
+#email-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+#mail-form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#mail-form input{
+    /* width: 40%; */
+    flex-grow: 1;
+    height: 30px;
+    font-size: 16px;
+}
+#mail-form textarea {
+    /* width: 80%; */
+    flex-grow: 3;
+}
+#submit {
+    flex-grow: 2;
+    height: 60px; 
+}

@@ -1,17 +1,16 @@
 body {
     background-color: rgba(84, 122, 165, 1);
     background-image: url("background1.png");
-    /* background: linear-gradient(to right, rgba(84, 122, 165, 1), white); */
-    /* background: rgb(84,122,165);
-    background: linear-gradient(143deg, rgba(249,251,251,1) 0%, rgba(84,122,165,1) 40%, rgba(84,122,165,1) 100%); */
+   
 }
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) { */
+    @media (min-width: 501px) {
 #contact {
     margin: 0;
     position: absolute;
-    top: 75vh;
-    left: 62vw;
+    top: 0px;
+    left: 0px;
     color: #EBECEC;
 }
 #contact:hover {
@@ -19,13 +18,12 @@ body {
 }
 #content {
     width: 100%;
-    height: 100vh;
 }
 #extra {
     margin: 0;
     position: absolute;
-    top: 75vh;
-    left: 10vw;
+    top: 0px;
+    left: 0px;
 }
 #extra:hover {
     opacity: .7;
@@ -36,8 +34,8 @@ body {
 #info {
     margin: 0;
     position: absolute;
-    top: 15vh;
-    left: 10vw;
+    top: 0px;
+    left: 0px;
     /* -ms-transform: translate(-25%, -25%);
     transform: translate(-25%, -25%); */
 }
@@ -69,29 +67,28 @@ body {
 
 .popUp {
     display: none;
-    width: 28vw;
-    /* min-width: 265px; */
-    /* min-width: 370px; */
-    /* height: 150px; */
+    width: 30vw;
     height: 10vh;
-    /* background-color: #4F5165; */
     border-radius: 10px;
     box-shadow: 5px 5px 12px #474044;
     color: #293132;
     text-align: center;
     font-family: 'Lora', serif;
-    font-size: 5vw;
+    font-size: 5vh;
     text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
-    /* padding: 5px; */
+}
+.popUp:hover {
+    box-shadow: 1px 1px 5px #474044;
+    text-shadow: 0px 1px 1px rgba(80, 216, 215, 1);
 }
 .popUp i {
-    padding-top: 3px;
+    padding-top: 25px;
 }
 #pricing {
     margin: 0; 
     position: absolute;
-    top: 15vh;
-    left: 62vw;
+    top: 0px;
+    left: 0px;
 }
 #pricing:hover {
     opacity: .7;
@@ -102,13 +99,15 @@ body {
     font-size: 10vh;
     color: #293132;
     margin-bottom: 20px;
-    /* margin-top: 30px; */
     margin-top: 10vh;
     text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
 }
 }
 @media (min-width: 1200px){
     .popUp {
-        font-size: 70px;
+        font-size: 6vh;
+    }
+    .popUp i {
+        padding-top: 5px;
     }
 }

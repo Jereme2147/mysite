@@ -1,0 +1,76 @@
+/* style sheet for content pages */
+#contents {
+    display: flex;
+}
+#email-form {
+    width: 100%;
+    padding: 10px;
+}
+
+#mail-form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#mail-form input{
+    width: 40%;
+    min-width: 200px;
+    /* height: 30px; */
+    font-size: 16px;
+    margin: 10px;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #EBECEC;
+    outline: none;
+}
+#mail-form input:hover{
+    box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
+}
+#mail-form input:focus{
+    box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
+}
+#mail-form textarea {
+    width: 90%;
+    font-size: 16px;
+    margin: 10px;
+    background-color: transparent;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom-color: #EBECEC;
+    outline: none;
+   
+}
+#mail-form textarea:hover{
+    box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
+}
+#mail-form textarea:focus{
+    box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
+}
+::placeholder{
+    color: rgba(79, 81, 101, 1);
+}
+#submit {
+    height: 30px;
+    width: 20%; 
+    /* box-shadow: 0px 3px 1px #4F5165,
+                0px -1px 1px rgba(80, 216, 215, 1),
+                3px 0px 1px #4F5165, 
+                3px 3px 1px #4F5165,
+                -1px 0px 1px rgba(80, 216, 215, 1);
+    text-shadow: 2px 2px 1px #EBECEC; */
+    background-color: rgba(79, 81, 101, 1);
+    box-shadow: 2px 2px 1px #EBECEC;
+    color: #EBECEC;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(80, 216, 215, 1);
+    border-style: none;
+    border-radius: 5px;
+    
+}
+/* ********************************* */

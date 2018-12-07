@@ -1,29 +1,42 @@
 
 $(document).ready(function(){
-    let large = window.matchMedia("(min-width: 1025px)");
-    let medium = window.matchMedia("(min-width: 421px) and (max-width: 1024px)");
-    let small = window.matchMedia("(max-width: 420px)");
-    console.log(medium);
-   /* large media */
+    let large = window.matchMedia("(min-width: 501px)");
+    let small = window.matchMedia("(max-width: 500px)");
+   /* large media  shows popups and animates their fade into position on page*/
     if (large.matches) {
         $('.photo-div').hover(function () {
-            // $('.popUp').show("slow");
-            $('.popUp').fadeIn(1000);
             $('#front-photo').show();
-            // $('#title').css({'font-size' : '8vh'})
+            $('.photo-div').animate({
+                top: "40%"
+            }, 1000);
+            $('#contact').fadeIn(100);
+            $('#contact').animate({
+                left: "51vw",
+                top: "80vh"
+            },1000);
+            $('#extra').fadeIn(100);
+            $('#extra').animate({
+                left: "19vw",
+                top: "80vh"
+            }, 1000);
+            setTimeout(() => {
+                $('#pricing').fadeIn(100);
+                $('#pricing').animate({
+                    left: "51vw",
+                    top: "68vh"
+                }, 1000);
+                $('#info').fadeIn(100);
+                $('#info').animate({
+                    left: "19vw",
+                    top: "68vh"
+                }, 1000);
+            }, 400);
             $("#title").animate({
                 fontSize: "8vh",
                 marginTop: "5vh"
             }, 1000);
         }, function () {
             $('#front-photo').hide();
-        })
-        $('.photo-div').click(function () {
-            $('.popUp').toggle();
-            $("#title").animate({
-                fontSize: "10vh",
-                marginTop: "10vh"
-            }, 1000);
         })
     };
     /* small media */
@@ -45,149 +58,4 @@ $(document).ready(function(){
             }, 1000);
         });
     };
-    /* Medium tablets/narrow screens on the large side */
-    if (medium.matches) {
-        $('#content').html(mediumScreen);
-        $('.popUp').hide();
-        $('.photo-div').click(function () {
-            $('.photo-div').animate({
-                marginTop: "5vh"
-            }, 500);
-            $('#back-photo').html(`<img src="surprised.png" alt="my picture" id="photo">`);
-            setTimeout(() => {
-                $('#back-photo').html(`<img src="noexpression.png" alt="my picture" id="photo">`);
-            }, 1000);
-            $('.popUp').show();
-            $('#title').animate({
-                marginTop: "2vh",
-                marginBottom: "5px"
-            }, 500);
-        })
-        
-        // $('.popUp').hide();
-    }
- 
-    //info button hover
-    $('#info').mouseenter(function(){
-        $('#pricing').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 100);
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 200);
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 300);
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 400);
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 500);
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 600);
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 700);
-    });
-    //pricing button hover 
-    $('#pricing').mouseenter(function () {
-        $('#contact').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 100);
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 200);
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 300);
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 400);
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 500);
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });
-        }, 600);
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 700);
-    });
-    //contact button hover 
-    $('#contact').mouseenter(function () {
-        $('#extra').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 100);
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 200);
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 300);
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });
-        }, 400);
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 500);
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 600);
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 700);
-    });
-    $('#extra').mouseenter(function () {
-        $('#info').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        setTimeout(() => {
-            $('#info').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 100);
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });
-        }, 200);
-        setTimeout(() => {
-            $('#pricing').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 300);
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow
-        }, 400);
-        setTimeout(() => {
-            $('#contact').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 500);
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 20px 1px #50D8D7' });//must change to popUp shadow    
-        }, 600);
-        setTimeout(() => {
-            $('#extra').css({ 'box-shadow': '3px 3px 12px #474044' });//must change to popUp shadow
-        }, 700);
-    });
-
 });
-let mediumScreen = `<div id="menu"><!-- will show on all pages except landing -->
-        </div> 
-        <div id="back-photo" class="photo-div">
-            <img src="noexpression.png" alt="my picture" id="photo">
-        </div>
-        <!-- picture to show on hover / click -->
-        <div id="front-photo" class="photo-div">
-            <img src="surprised.png" alt="my picture" id="photo">
-        </div>
-        <div id="medium-screens"> 
-            <div id="info" class="popUp">
-                <i class="fas fa-info-circle">Info</i>
-            </div>
-            <div id="contact" class="popUp">
-                <i class="fas fa-envelope">Contact</i>
-            </div>
-            <div id="pricing" class="popUp">
-                <i class="fas fa-dollar-sign">Pricing</i>
-            </div>
-            <div id="extra" class="popUp">
-                <i class="fas fa-smile">Extra</i>
-            </div>
-        </div>`;
