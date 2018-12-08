@@ -11,7 +11,10 @@
     width: 60vw;
     /* height: 100%; */
 }
-
+#home {
+    display: flex;
+    justify-content: flex-end; 
+}
 #title {
     display: flex;
     justify-content: flex-end;

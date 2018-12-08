@@ -1,10 +1,41 @@
 /* style sheet for content pages */
+#about {
+    color: #EBECEC;
+    padding: 20px 10px 10px 10px;
+    text-shadow: 1px 1px 1px rgba(79, 81, 101, 1);
+}
+#about p {
+    padding: 5px 0 5px 0;
+}
 #contents {
     display: flex;
+    flex-direction: column;
+}
+#contact-icons {
+    /* height: 10%; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #EBECEC;
+    margin-top: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(79, 81, 101, 1);
+
+}
+#contact-stuff {
+    display: flex;
+    justify-content: center;
+    color: #EBECEC;
+    padding: 20px 10px 10px 10px;
+    text-shadow: 1px 1px 1px rgba(79, 81, 101, 1);
+
 }
 #email-form {
     width: 100%;
     padding: 10px;
+    margin-top: 15px;
 }
 
 #mail-form {
@@ -33,6 +64,7 @@
 }
 #mail-form input:focus{
     box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
+    background-color: rgb(99, 138, 182);
 }
 #mail-form textarea {
     width: 90%;
@@ -48,8 +80,10 @@
 }
 #mail-form textarea:hover{
     box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
+    
 }
 #mail-form textarea:focus{
+    background-color: rgb(99, 138, 182);
     box-shadow: 2px 2px 1px rgba(79, 81, 101, 1);
 }
 ::placeholder{
@@ -58,12 +92,6 @@
 #submit {
     height: 30px;
     width: 20%; 
-    /* box-shadow: 0px 3px 1px #4F5165,
-                0px -1px 1px rgba(80, 216, 215, 1),
-                3px 0px 1px #4F5165, 
-                3px 3px 1px #4F5165,
-                -1px 0px 1px rgba(80, 216, 215, 1);
-    text-shadow: 2px 2px 1px #EBECEC; */
     background-color: rgba(79, 81, 101, 1);
     box-shadow: 2px 2px 1px #EBECEC;
     color: #EBECEC;

@@ -4,9 +4,10 @@
     <script src="info.js"></script>
 <?php
     include_once "info-nav.php";
-?>
-<!-- You're inside div contents -->
-<?php
+    include "./info-content/about-content.php";
+    include "./info-content/contact-content.php";
+    echo $about;
+    echo $contact; 
     include_once "info-footer.php";
 
 ?>

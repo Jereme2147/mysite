@@ -4,9 +4,9 @@
     <div id="container">
         <div id="nav">
             <div id="title">
-                <h1>JD Webs</h1>
+                <h1>Scratch</h1>
             </div>
-            <a href="#" id="homeA">
+            <a href="/mysite/" id="homeA">
                 <div class="menu" id="home">
                     <li>Home</li>
                 </div>
